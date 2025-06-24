@@ -1,1 +1,28 @@
 
+.category-scroll {
+  overflow-x: auto;
+  white-space: nowrap;
+  padding: 10px 0;
+  background-color: #f8f9fa;
+}
+.category-item {
+  display: inline-block;
+  background-color: #fcd34d;
+  padding: 8px 16px;
+  margin: 0 8px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.category-item:hover {
+  background-color: #fbbf24;
+}
+.rounded-circle-img {
+  border-radius: 50%;
+  box-shadow: rgba(0,0,0,.35) 0 5px 15px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
