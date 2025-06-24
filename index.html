@@ -86,6 +86,15 @@
       </div>
 	  </div>
 	  
+	  <!-- Floating Cart Button -->
+  <div class="floating-cart-btn">
+    <button class="btn btn-dark position-relative" onclick="toggleCart()">
+      🛒
+      <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="cartCount">0</span>
+    </button>
+  </div>
+
+	  
 	  <!-- Dish Detail Modal -->
   <div class="modal fade" id="dishModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -109,6 +118,21 @@
       </div>
     </div>
   </div>
+  
+  <!-- Cart Offcanvas -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartDrawer" aria-labelledby="cartDrawerLabel" 
+     data-bs-scroll="false" data-bs-backdrop="true">
+
+    <div class="offcanvas-header">
+      <h5>Giỏ hàng</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body" id="cartList"></div>
+    <div class="p-3 border-top">
+      <strong>Total: VNĐ <span id="cartTotal">0.00</span></strong>
+    </div>
+  </div>
+
 
 	  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
