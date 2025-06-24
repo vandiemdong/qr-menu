@@ -15,6 +15,13 @@
   cursor: pointer;
   white-space: nowrap;
 }
+
+.category-item.selected {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
 .category-item:hover {
   background-color: #fbbf24;
 }
