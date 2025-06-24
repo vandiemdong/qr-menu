@@ -10,7 +10,7 @@ const allItems = [
   { id: 9,name: "Trà sen nhãn", price: "28.000 VND", img: "images/tratraicaynhietdoi.png", categoryId: 2 },
   { id: 10,name: "Trà xoài chanh dây", price: "28.000 VND", img: "images/tratraicaynhietdoi.png", categoryId: 2 },
   { id: 11,name: "Trà dứa đác thơm", price: "28.000 VND", img: "images/tratraicaynhietdoi.png", categoryId: 2 },
-  { id: 12,name: "Trà dâu tằm", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 2 },
+  { id: 12,name: "Trà dâu tằm", price: "28.000 VND", img: "images/tratraicaynhietdoi.png", categoryId: 2 },
   { id: 13,name: "Trà sữa Thái đỏ", price: "28.000 VND", img: "images/thaired.jpg", categoryId: 3 },
   {id: 14, name: "Trà sữa Thái xanh", price: "28.000 VND", img: "images/thaigreen.jpg", categoryId: 3 },
   {id: 15, name: "Matcha Latte", price: "28.000 VND", img: "images/matcha.jpg", categoryId: 4 },
