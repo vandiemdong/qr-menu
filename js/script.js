@@ -1,46 +1,52 @@
+const allItems = [
+  { name: "Fried Rice", price: "28.000 VND", img: "images/drinks1.jpg", categoryId: 1 },
+  { name: "Milk Tea", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 2 },
+  { name: "Latte", price: "28.000 VND", img: "images/drinks3.jpg", categoryId: 3 },
+  { name: "Fried Rice 2", price: "28.000 VND", img: "images/drinks1.jpg", categoryId: 1 },
+  { name: "Milk Tea 2", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 2 },
+  { name: "Latte 2", price: "28.000 VND", img: "images/drinks4.jpg", categoryId: 3 },
+];
 
-function showSubMenu(categoryName) {
+
+function showItemsByCategory(categoryId, element) {
   document.getElementById('mainCategories').classList.add('d-none');
   document.getElementById('subCategoryMenu').classList.remove('d-none');
   document.getElementById('dishArea').classList.remove('d-none');
-  document.getElementById('selectedMainCategory').innerText = categoryName;
+  document.getElementById('selectedMainCategory').innerText = categoryId;
 
+  // Highlight selected sub-category item
+  document.querySelectorAll('.category-item').forEach(item => {
+    item.classList.remove('selected');
+  });
+  if (element) {
+    element.classList.add('selected');
+  }
+
+  // Lọc item theo category
   const dishList = document.getElementById('dishList');
   dishList.innerHTML = '';
 
-  const sampleDishes = [
-    { name: "Fried Rice", price: "$4.99", img: "images/drinks1.jpg" },
-    { name: "Iced Tea", price: "$2.50", img: "images/drinks2.jpg" },
-    { name: "Noodles", price: "$5.50", img: "images/drinks3.jpg" },
-    { name: "Fried Rice", price: "$4.99", img: "images/drinks4.jpg" },
-    { name: "Iced Tea", price: "$2.50", img: "images/drinks1.jpg" },
-    { name: "Noodles", price: "$5.50", img: "images/drinks1.jpg" }
-  ];
+  const filteredItems = allItems.filter(item => item.categoryId === categoryId);
 
- sampleDishes.forEach(dish => {
-  const col = document.createElement('div');
-  col.className = 'col-6 col-md-4'; 
-  // col-6: 2 items per row on small screens (<768px)
-  // col-md-4: 3 items per row on medium+ screens (>=768px)
-
-  col.innerHTML = `
-    <div class="card h-100">
-      <img src="${dish.img}" class="card-img-top">
-      <div class="card-body p-2">
-        <h6 class="card-title mb-1">${dish.name}</h6>
-        <p class="card-text small text-muted">${dish.price}</p>
+  filteredItems.forEach(item => {
+    const col = document.createElement('div');
+    col.className = 'col-6 col-md-4';
+    col.innerHTML = `
+      <div class="card h-100">
+        <img src="${item.img}" class="card-img-top">
+        <div class="card-body p-2">
+          <h6 class="card-title mb-1">${item.name}</h6>
+          <p class="card-text small text-muted">${item.price}</p>
+        </div>
       </div>
-    </div>
-  `;
-  dishList.appendChild(col);
-});
-
-
+    `;
+    dishList.appendChild(col);
+  });
 }
+
 
 function goBack() {
   document.getElementById('mainCategories').classList.remove('d-none');
   document.getElementById('subCategoryMenu').classList.add('d-none');
   document.getElementById('dishArea').classList.add('d-none');
 }
-
