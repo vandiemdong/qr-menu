@@ -1,8 +1,8 @@
 const allItems = [
   { id: 1,name: "Cà phê đen", price: "28.000 VND", img: "images/denda.jpg", categoryId: 1 },
   { id: 2,name: "Cà phê sữa", price: "28.000 VND", img: "images/suada.jpg", categoryId: 1 },
-  { id: 3,name: "Trà trái cây nhiệt đới", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 2 },
-  { id: 4,name: "Trà dưa lưới tứ quý", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 2 },
+  { id: 3,name: "Trà trái cây nhiệt đới", price: "28.000 VND", img: "images/tratraicaynhietdoi.jpg", categoryId: 2 },
+  { id: 4,name: "Trà dưa lưới tứ quý", price: "28.000 VND", img: "images/tradualuoi.jpg", categoryId: 2 },
   { id: 5,name: "Trà ổi hồng ngọc trai", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 2 },
   { id: 6,name: "Trà cam dâu đác", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 2 },
   {id: 7, name: "Trà lựu đỏ thanh long", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 2 },
@@ -13,11 +13,11 @@ const allItems = [
   { id: 12,name: "Trà dâu tằm", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 2 },
   { id: 13,name: "Trà sữa Thái đỏ", price: "28.000 VND", img: "images/thaired.jpg", categoryId: 3 },
   {id: 14, name: "Trà sữa Thái xanh", price: "28.000 VND", img: "images/thaigreen.jpg", categoryId: 3 },
-  {id: 15, name: "Matcha Latte", price: "28.000 VND", img: "images/drinks3.jpg", categoryId: 4 },
-  { id: 16,name: "Matcha sữa hạt Oatside", price: "28.000 VND", img: "images/drinks1.jpg", categoryId: 4 },
-  { id: 17,name: "Matcha sữa gấu", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 4 },
-  { id: 18,name: "Matcha xoài", price: "28.000 VND", img: "images/drinks4.jpg", categoryId: 4 },
-  { id: 19,name: "Matcha dâu", price: "28.000 VND", img: "images/drinks2.jpg", categoryId: 4 },
+  {id: 15, name: "Matcha Latte", price: "28.000 VND", img: "images/matcha.jpg", categoryId: 4 },
+  { id: 16,name: "Matcha sữa hạt Oatside", price: "28.000 VND", img: "images/matcha.jpg", categoryId: 4 },
+  { id: 17,name: "Matcha sữa gấu", price: "28.000 VND", img: "images/matcha.jpg", categoryId: 4 },
+  { id: 18,name: "Matcha xoài", price: "28.000 VND", img: "images/matchamango.jpg", categoryId: 4 },
+  { id: 19,name: "Matcha dâu", price: "28.000 VND", img: "images/matchadau.jpg", categoryId: 4 },
   { id: 20,name: "Matcha dưa lưới", price: "28.000 VND", img: "images/drinks4.jpg", categoryId: 4 },
 ];
 let currentDish = null;
