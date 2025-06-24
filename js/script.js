@@ -32,7 +32,7 @@ function showItemsByCategory(categoryId, element) {
     const col = document.createElement('div');
     col.className = 'col-6 col-md-4';
     col.innerHTML = `
-      <div class="card h-100">
+      <div class="card h-100" onclick='openDishDetail(${JSON.stringify(item)})'>
         <img src="${item.img}" class="card-img-top">
         <div class="card-body p-2">
           <h6 class="card-title mb-1">${item.name}</h6>
@@ -50,3 +50,25 @@ function goBack() {
   document.getElementById('subCategoryMenu').classList.add('d-none');
   document.getElementById('dishArea').classList.add('d-none');
 }
+
+ function openDishDetail(dish) {
+      currentDish = dish;
+      currentQty = 1;
+      document.getElementById('modalDishImg').src = dish.img;
+      document.getElementById('modalDishName').innerText = dish.name;
+      document.getElementById('modalPrice').innerText = dish.price;
+      document.getElementById('modalQty').innerText = currentQty;
+
+      const modal = new bootstrap.Modal(document.getElementById('dishModal'));
+      modal.show();
+    }
+
+    function changeQty(amount) {
+      currentQty = Math.max(1, currentQty + amount);
+      document.getElementById('modalQty').innerText = currentQty;
+    }
+
+    function addToCart() {
+      alert(`Added ${currentQty} × ${currentDish.name} to cart`);
+    }
+
