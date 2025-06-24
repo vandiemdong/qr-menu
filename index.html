@@ -31,23 +31,29 @@
       </div>
       <div class="mt-4" id="mainCategories">
            
-         <h4> Thuc Don</h4>
+         <h4>Menu</h4>
            
          <div class="row text-center">
                 
             <div class="col-4 mb-4" onclick="showItemsByCategory(1)">
                      <img src="images/drinks1.jpg" class="rounded-circle-img" />      
-               <div>Tra trai cay</div>
-                   
-            </div>
-                
-            <div class="col-4 mb-4" onclick="showItemsByCategory(2)">
-                     <img src="images/drinks2.jpg" class="rounded-circle-img" />      
-               <div>Tra sua</div>
+               <div>Cà phê</div>
                    
             </div>
                 
             <div class="col-4 mb-4" onclick="showItemsByCategory(3)">
+                     <img src="images/milktea.jpg" class="rounded-circle-img" />      
+               <div>Trà sữa</div>
+                   
+            </div>
+                
+            <div class="col-4 mb-4" onclick="showItemsByCategory(2)">
+                     <img src="images/drinks3.jpg" class="rounded-circle-img" />      
+               <div>Trà trái cây</div>
+                   
+            </div>
+			
+			<div class="col-4 mb-4" onclick="showItemsByCategory(4)">
                      <img src="images/drinks3.jpg" class="rounded-circle-img" />      
                <div>Latte</div>
                    
@@ -59,17 +65,19 @@
            
          <div class="category-scroll d-flex">
                 
-            <div class="category-item" onclick="showItemsByCategory(1,this)">Tra trai cay</div>
+            <div class="category-item" onclick="showItemsByCategory(1,this)">Cà phê</div>
                 
-            <div class="category-item" onclick="showItemsByCategory(2,this)">Tra sua</div>
+            <div class="category-item" onclick="showItemsByCategory(3,this)">Trà sữa</div>
                 
-            <div class="category-item" onclick="showItemsByCategory(3,this)">Latte</div>
+            <div class="category-item" onclick="showItemsByCategory(2,this)">Trà trái cây</div>
+			
+			<div class="category-item" onclick="showItemsByCategory(4,this)">Latte</div>
               
          </div>
       </div>
       <div class="d-none" id="dishArea">
            
-         <h5 class="mt-4">Items in <span id="selectedMainCategory">...</span></h5>
+         <!--<h5 class="mt-4">Items in <span id="selectedMainCategory">...</span></h5>-->  
            
          <div class="row g-3" id="dishList">
                 <!-- Dynamic dish cards go here -->  
@@ -85,8 +93,8 @@
         <img id="modalDishImg" class="w-100" style="object-fit: cover; height: 250px;" />
         <div class="modal-body">
           <h5 id="modalDishName" class="mb-2 fw-bold"></h5>
-          <label class="form-label">Special Requests</label>
-          <input type="text" class="form-control mb-3" placeholder="Add a note (extra sauce, no onions, etc.)" />
+          <label class="form-label">Ghi chú</label>
+          <input type="text" class="form-control mb-3" placeholder="Ít ngọt, ít đá ..." />
 
           <div class="d-flex justify-content-center align-items-center mb-3">
             <button class="btn btn-outline-secondary" onclick="changeQty(-1)">−</button>
@@ -95,7 +103,7 @@
           </div>
 
           <button class="btn btn-dark w-100" onclick="addToCart()">
-            Add to cart — <span id="modalPrice">RM 0.00</span>
+            Thêm vào giỏ hàng — <span id="modalPrice">RM 0.00</span>
           </button>
         </div>
       </div>
